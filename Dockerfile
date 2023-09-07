@@ -7,7 +7,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["AzureWebAppTest.csproj", "AzureWebAppTest/"]
+COPY ["AzureWebAppTest/AzureWebAppTest.csproj", "AzureWebAppTest/"]
 RUN dotnet restore "AzureWebAppTest/AzureWebAppTest.csproj"
 COPY . .
 WORKDIR "/src/AzureWebAppTest"
